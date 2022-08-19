@@ -112,7 +112,8 @@ docker cp <container id>:/usr/local/airflow/output/checking_distribution.png C:/
 docker cp <container id>:/usr/local/airflow/output/credit_amount_by_job.png C:/.../output/
 docker cp <container id>:/usr/local/airflow/output/algorithm_comparison.png C:/.../output/
  ```
-![alt text](https://github.com/garagaby/Kernel-Airflow/tree/kernel_feature/imagenes_resultado/Data_correlation.png?raw=true)
+
+![alt text](https://github.com/garagaby/kernel-Airflow/blob/kernel_feature/imagenes_resultado/Data_correlation.png?raw=true)
 
 
 Los dataset que se generan, se guardan en l carpeta */usr/local/airflow/modelos/*. Y se pueden extraer de la siguiente forma:
