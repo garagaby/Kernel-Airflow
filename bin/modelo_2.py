@@ -21,7 +21,7 @@ from sklearn.metrics import roc_curve
 
 
 df_credit, X_train, X_test, y_train, y_test = preprocessing.preprocessing()
-output_dir = '/usr/local/airflow/output/'
+output_dir = '/usr/local/airflow/modelos/'
 
 
 # Criando o classificador logreg

@@ -114,11 +114,11 @@ docker cp <container id>:/usr/local/airflow/output/algorithm_comparison.png C:/.
  ```
 
 
-Los dataset que se generan, se guardan en l carpeta */usr/local/airflow/output/modelos*. Y se pueden extraer de la siguiente forma:
+Los dataset que se generan, se guardan en l carpeta */usr/local/airflow/modelos/*. Y se pueden extraer de la siguiente forma:
 
 ```shell
-docker cp f4fe8709b67b:/usr/local/airflow/output/modelos/modelo_1.csv C:/..../modelos/
-docker cp f4fe8709b67b:/usr/local/airflow/output/modelos/modelo_2.csv C:/..../modelos/
+docker cp f4fe8709b67b:/usr/local/airflow/modelos/modelo_1.csv C:/..../modelos/
+docker cp f4fe8709b67b:/usr/local/airflow/modelos/modelo_2.csv C:/..../modelos/
 ```
 
 

@@ -18,7 +18,7 @@ import numpy as np
 import preprocessing
 
 df_credit, X_train, X_test, y_train, y_test = preprocessing.preprocessing()
-output_dir = '/usr/local/airflow/output/modelos'
+output_dir = '/usr/local/airflow/modelos/'
 #Seting the Hyper Parameters
 param_grid = {"max_depth": [3,5, 7, 10,None],
               "n_estimators":[3,5,10,25,50,150],
