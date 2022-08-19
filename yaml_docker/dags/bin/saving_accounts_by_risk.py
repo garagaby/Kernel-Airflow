@@ -6,13 +6,8 @@ from collections import Counter # To do counter of some features
 from matplotlib import pyplot as plt
 from plotly import tools
 import numpy as np
-import leer_informacion 
 
-df_credit = leer_informacion.importar_datos()
 output_dir = '/usr/local/airflow/output/'
-
-df_good = df_credit[df_credit["Risk"] == 'good']
-df_bad = df_credit[df_credit["Risk"] == 'bad']
 
 count_good = go.Bar(
     x = df_good["Saving accounts"].value_counts().index.values,

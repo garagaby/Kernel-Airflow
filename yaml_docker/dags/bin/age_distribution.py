@@ -5,9 +5,7 @@ import plotly.tools as tls # It's useful to we get some tools of plotly
 import warnings # This library will be used to ignore some warnings
 from collections import Counter # To do counter of some features
 from matplotlib import pyplot as plt
-import leer_informacion 
 
-df_credit = leer_informacion.importar_datos()
 output_dir = '/usr/local/airflow/output/'
 
 df_good = df_credit.loc[df_credit["Risk"] == 'good']['Age'].values.tolist()

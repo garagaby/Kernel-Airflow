@@ -7,13 +7,9 @@ from collections import Counter # To do counter of some features
 from matplotlib import pyplot as plt
 import plotly.figure_factory as ff
 import numpy as np
-import leer_informacion 
 
-df_credit = leer_informacion.importar_datos()
 output_dir = '/usr/local/airflow/output/'
 
-df_good = df_credit[df_credit["Risk"] == 'good']
-df_bad = df_credit[df_credit["Risk"] == 'bad']
 # Add histogram data
 x1 = np.log(df_good['Credit amount']) 
 x2 = np.log(df_bad["Credit amount"])

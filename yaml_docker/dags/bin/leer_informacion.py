@@ -16,4 +16,3 @@ def importar_datos():
         print(df_credit.head())
     except:
         print('ERROR')
-    return df_credit 

@@ -1,23 +1,5 @@
 import pandas as pd
-from random import shuffle
-from sklearn.model_selection import train_test_split, KFold, cross_val_score # to split the data
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, fbeta_score #To evaluate our model
-from sklearn.model_selection import GridSearchCV
-# Algorithmns models to be compared
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.naive_bayes import GaussianNB
-from sklearn.svm import SVC
-from xgboost import XGBClassifier
-from matplotlib import pyplot as plt
-import numpy as np
-import preprocessing
 
-df_credit, X_train, X_test, y_train, y_test = preprocessing.preprocessing()
 output_dir = '/usr/local/airflow/output/modelos'
 #Seting the Hyper Parameters
 param_grid = {"max_depth": [3,5, 7, 10,None],

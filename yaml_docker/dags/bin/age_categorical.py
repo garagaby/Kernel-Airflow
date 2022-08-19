@@ -1,14 +1,11 @@
 # it's a library that we work with plotly
-import pandas as pd #To work with dataset
 import plotly.offline as py 
 import plotly.graph_objs as go # it's like "plt" of matplot
 import plotly.tools as tls # It's useful to we get some tools of plotly
 import warnings # This library will be used to ignore some warnings
 from collections import Counter # To do counter of some features
 from matplotlib import pyplot as plt
-import leer_informacion 
 
-df_credit = leer_informacion.importar_datos()
 output_dir = '/usr/local/airflow/output/'
 
 #Let's look the Credit Amount column
