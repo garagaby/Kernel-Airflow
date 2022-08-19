@@ -89,4 +89,5 @@ pd_columns_name = df_total.rename({0 : 'Age',
  23 : 'Age_cat_Adult',
  24 : 'Prediction'}, axis = 'columns')
 
+# Generación de un archivo csv a partir del modelo de datos RandomForest
 pd_columns_name.to_csv(output_dir + 'modelo_1.csv')
