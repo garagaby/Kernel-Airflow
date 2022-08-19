@@ -1,3 +1,4 @@
+
 # it's a library that we work with plotly
 import plotly.offline as py 
 import plotly.graph_objs as go # it's like "plt" of matplot
@@ -8,45 +9,25 @@ from matplotlib import pyplot as plt
 
 output_dir = '/usr/local/airflow/output/'
 
-#Let's look the Credit Amount column
-interval = (18, 25, 35, 60, 120)
-
-cats = ['Student', 'Young', 'Adult', 'Senior']
-df_credit["Age_cat"] = pd.cut(df_credit.Age, interval, labels=cats)
-
-
-df_good = df_credit[df_credit["Risk"] == 'good']
-df_bad = df_credit[df_credit["Risk"] == 'bad']
-
 trace0 = go.Box(
+    x=df_good["Job"],
     y=df_good["Credit amount"],
-    x=df_good["Age_cat"],
-    name='Good credit',
-    marker=dict(
-        color='#3D9970'
-    )
+    name='Good credit'
 )
 
 trace1 = go.Box(
+    x=df_bad['Job'],
     y=df_bad['Credit amount'],
-    x=df_bad['Age_cat'],
-    name='Bad credit',
-    marker=dict(
-        color='#FF4136'
-    )
+    name='Bad credit'
 )
     
 data = [trace0, trace1]
 
 layout = go.Layout(
     yaxis=dict(
-        title='Credit Amount (US Dollar)',
-        zeroline=False
-    ),
-    xaxis=dict(
-        title='Age Categorical'
+        title='Credit Amount distribuition by Job'
     ),
     boxmode='group'
 )
 fig = go.Figure(data=data, layout=layout)
-fig.write_image(output_dir + 'age_categorical.png')
+fig.write_image(output_dir + 'credit_amount_by_job.png')
