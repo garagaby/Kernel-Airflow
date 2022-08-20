@@ -120,6 +120,7 @@ docker cp <container id>:/usr/local/airflow/output/algorithm_comparison.png C:/.
 <p align="center">
 Figura 2. Gráficas Generadas
 </p>
+
 ![Correlación de los datos](https://github.com/garagaby/Kernel-Airflow/blob/kernel_feature/imagenes_resultado/Data_correlation.PNG)
 <p align="center">
 Figura 3. Correlación de los datos 
@@ -135,6 +136,7 @@ docker cp f4fe8709b67b:/usr/local/airflow/modelos/modelo_2.csv C:/..../modelos/
 <p align="center">
 Figura 4. Dataset Modelo 1 (RandomForest)
 </p>
+
  ![Carpetas en Docker](https://github.com/garagaby/Kernel-Airflow/blob/kernel_feature/imagenes_resultado/files_Docker.PNG)
 <p align="center">
 Figura 5. Archivos generados en Docker  
