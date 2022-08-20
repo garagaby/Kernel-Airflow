@@ -91,8 +91,9 @@ docker ps
 Se creo un DAG de Apache Airflow, que lee los datos del archivo fuente, posteriormente genera distintas gráficas que describen el comportamiento de los datos y ejecuta los modelos de riesgo, dando como resultado los datasets con las clasificaciones de acuerdo al modelo.
 
  ![DAG](https://github.com/garagaby/Kernel-Airflow/blob/kernel_feature/imagenes_resultado/DAG.PNG)
+<p align="center">
 Figura 1. DAG
-
+</p>
 Para ello el DAG se divide en dos secciones la generación de graficas y ejecucion de modelos, la primera ejecuta distintas task en paralelo, ya que el procesamiendo es ligero generando distintas gráficas de la distribucion de los datos; la segunda ejecuta los modelos de riesgo de manera secuencial, ya que son tareas computacionalmente costosas, dando como resultado un dataset de pandas con la clasificación completa para cada modelo (RandomForest y GaussianNB).
 
 
@@ -116,10 +117,13 @@ docker cp <container id>:/usr/local/airflow/output/credit_amount_by_job.png C:/.
 docker cp <container id>:/usr/local/airflow/output/algorithm_comparison.png C:/.../output/
  ```
 ![Gráficas generadas](https://github.com/garagaby/Kernel-Airflow/blob/kernel_feature/imagenes_resultado/graficos.PNG)
+<p align="center">
 Figura 2. Gráficas Generadas
-
+</p>
 ![Correlación de los datos](https://github.com/garagaby/Kernel-Airflow/blob/kernel_feature/imagenes_resultado/Data_correlation.PNG)
+<p align="center">
 Figura 3. Correlación de los datos 
+</p>
 
 Los dataset que se generan, se guardan en l carpeta */usr/local/airflow/modelos/*. Y se pueden extraer de la siguiente forma:
 
@@ -128,10 +132,13 @@ docker cp f4fe8709b67b:/usr/local/airflow/modelos/modelo_1.csv C:/..../modelos/
 docker cp f4fe8709b67b:/usr/local/airflow/modelos/modelo_2.csv C:/..../modelos/
 ```
 ![csv Modelo 1 (RandomForest)](https://github.com/garagaby/Kernel-Airflow/blob/kernel_feature/imagenes_resultado/data_set_modelo_1.PNG)
+<p align="center">
 Figura 4. Dataset Modelo 1 (RandomForest)
-
+</p>
  ![Carpetas en Docker](https://github.com/garagaby/Kernel-Airflow/blob/kernel_feature/imagenes_resultado/files_Docker.PNG)
+<p align="center">
 Figura 5. Archivos generados en Docker  
+</P>
 
 
 
