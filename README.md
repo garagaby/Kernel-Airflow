@@ -13,11 +13,6 @@ Implementación de un modelo de riesgo crediticio, tomando como archivo fuente *
 - **dags** Se encuentra el archivo con la configuración del DAG para Apache AirFlow.
 - **yaml_docker** Configuración auxiliar de Docker.
 
-# Índice
-1. [Instalación](#Instalacion)
-2. [Funcionamiento](#Funcionamiento)
-3. [Resultados](#Resultados)
-
 **Instalación y ejecucción**<a name="Instalacion"></a>
 
 Instalación de la imagen de Docker, que contiene Apache Airflow en la terminal del sistema operativo.
