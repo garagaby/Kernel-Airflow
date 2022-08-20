@@ -13,7 +13,12 @@ Implementación de un modelo de riesgo crediticio, tomando como archivo fuente *
 - **dags** Se encuentra el archivo con la configuración del DAG para Apache AirFlow.
 - **yaml_docker** Configuración auxiliar de Docker.
 
-**Instalación y ejecucción**
+# Table of contents
+1. [Instalación](#Instalacion)
+2. [Funcionamiento](#Funcionamiento)
+3. [Resultados](#Resultados)
+
+**Instalación y ejecucción**<a name="Instalacion"></a>
 
 Instalación de la imagen de Docker, que contiene Apache Airflow en la terminal del sistema operativo.
 
@@ -85,8 +90,11 @@ Para saber el id del contenedor puedes ejecutar el siguiente comando
 ```shell
 docker ps
 ```
+Para ingresar a la interfaz de Apache Airflow
 
-**Funcionamiento**
+http://localhost:8080/admin/
+
+**Funcionamiento**<a name="Funcionamiento"></a>
 
 Se creo un DAG de Apache Airflow, que lee los datos del archivo fuente, posteriormente genera distintas gráficas que describen el comportamiento de los datos y ejecuta los modelos de riesgo, dando como resultado los datasets con las clasificaciones de acuerdo al modelo.
 
@@ -97,7 +105,7 @@ Figura 1. DAG
 Para ello el DAG se divide en dos secciones la generación de graficas y ejecucion de modelos, la primera ejecuta distintas task en paralelo, ya que el procesamiendo es ligero generando distintas gráficas de la distribucion de los datos; la segunda ejecuta los modelos de riesgo de manera secuencial, ya que son tareas computacionalmente costosas, dando como resultado un dataset de pandas con la clasificación completa para cada modelo (RandomForest y GaussianNB).
 
 
-**Resultados**
+**Resultados**<a name="Resultados"></a>
 
 Las gráficas se obtienen en formato PNG y de guardan en la carpeta *output* en el contenedor de Docker, se extraer con el siguiente comando:
  
