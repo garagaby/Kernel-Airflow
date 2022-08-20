@@ -2,18 +2,18 @@
 Implementación de un modelo de riesgo crediticio, tomando como archivo fuente *files/german_credit_data.csv*, implementado en un contenedor de Docker, el cuál genera gráficos del modelo de riesgo y distintas distribuciones. Además de la generación de dos archivos csv, los cuales contienen la clasificación completa del dataset de acuerdo a los modelos (RandomForest y GaussianNB), todo esto orquestado mediante Apache AirFlow.
 
 
-**Tecnológias**
+## Tecnológias
 - Python3
 - Apache Airflow 
 - Docker
 
-**Carpetas del Proyecto**
+## Carpetas del Proyecto
 - **bin** Contiene los archivos python para la lectura, generación de gráficas, implementación de modelos y escritura de datasets.
 - **files** Contiene el archivo fuente *german_credit_data.csv* para la implementación del modelo de riesgo. 
 - **dags** Se encuentra el archivo con la configuración del DAG para Apache AirFlow.
 - **yaml_docker** Configuración auxiliar de Docker.
 
-**Instalación y ejecucción**<a name="Instalacion"></a>
+## Instalación y ejecucción 
 
 Instalación de la imagen de Docker, que contiene Apache Airflow en la terminal del sistema operativo.
 
@@ -89,7 +89,7 @@ Para ingresar a la interfaz de Apache Airflow
 
 http://localhost:8080/admin/
 
-**Funcionamiento**<a name="Funcionamiento"></a>
+## Funcionamiento
 
 Se creo un DAG de Apache Airflow, que lee los datos del archivo fuente, posteriormente genera distintas gráficas que describen el comportamiento de los datos y ejecuta los modelos de riesgo, dando como resultado los datasets con las clasificaciones de acuerdo al modelo.
 
@@ -100,7 +100,7 @@ Figura 1. DAG
 Para ello el DAG se divide en dos secciones la generación de graficas y ejecucion de modelos, la primera ejecuta distintas task en paralelo, ya que el procesamiendo es ligero generando distintas gráficas de la distribucion de los datos; la segunda ejecuta los modelos de riesgo de manera secuencial, ya que son tareas computacionalmente costosas, dando como resultado un dataset de pandas con la clasificación completa para cada modelo (RandomForest y GaussianNB).
 
 
-**Resultados**<a name="Resultados"></a>
+## Resultados
 
 Las gráficas se obtienen en formato PNG y de guardan en la carpeta *output* en el contenedor de Docker, se extraer con el siguiente comando:
  
