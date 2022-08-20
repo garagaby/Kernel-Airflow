@@ -112,7 +112,7 @@ docker cp <container id>:/usr/local/airflow/output/checking_distribution.png C:/
 docker cp <container id>:/usr/local/airflow/output/credit_amount_by_job.png C:/.../output/
 docker cp <container id>:/usr/local/airflow/output/algorithm_comparison.png C:/.../output/
  ```
- ![DAG]((https://raw.githubusercontent.com/garagaby/Kernel-Airflow/tree/kernel_feature/imagenes_resultado/DAG.PNG)
+ ![DAG](https://raw.githubusercontent.com/garagaby/Kernel-Airflow/tree/kernel_feature/imagenes_resultado/DAG.PNG)
 
 
 
